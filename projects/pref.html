@@ -1,0 +1,90 @@
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>PREF: Predictability Regularized Neural Motion Fields</title>
+    <meta name="author" content="Liangchen Song">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+
+<body>
+<div class="main" style="max-width: 1080px;">
+<div class="content">
+<table>
+<tbody>
+<tr>
+    <td style="font-size: 250%; font-weight: bold"><span style="font-family:'Bungee Shade';">PREF</span>: Predictability Regularized Neural Motion Fields</td>
+</tr>
+<tr>
+    <td>
+        <p style="font-size: 120%;">
+        <a href="../index.html">Liangchen Song</a><sup style="color: #cb4b16;">1</sup>, 
+        <a href="https://xixigong.github.io/">Xuan Gong</a><sup style="color: #cb4b16;">1</sup>, 
+        <a href="https://planche.me/">Benjamin Planche</a><sup style="color: #859900;">2</sup>, 
+        <a href="https://scholar.google.com/citations?user=1D5PfMgAAAAJ&hl=en">Meng Zheng</a><sup style="color: #859900;">2</sup>,
+        </p>
+        <p style="font-size: 120%;">
+        <a href="https://cse.buffalo.edu/~doermann/">David Doermann</a><sup style="color: #cb4b16;">1</sup>, 
+        <a href="https://cse.buffalo.edu/~jsyuan/">Junsong Yuan</a><sup style="color: #cb4b16;">1</sup>, 
+        <a href="https://scholar.google.com/citations?user=S2BT6ogAAAAJ&hl=en">Terrence Chen</a><sup style="color: #859900;">2</sup>, and 
+        <a href="http://wuziyan.com/">Ziyan Wu</a><sup style="color: #859900;">2</sup>
+        </p>
+        <p style="font-size: 90%;"><sup style="color: #cb4b16;">1</sup> University at Buffalo, Buffalo NY, USA</p>
+        <p style="font-size: 90%;"><sup style="color: #859900;">2</sup> United Imaging Intelligence, Cambridge MA, USA</p>
+
+    </td>
+</tr>
+<tr>
+<td class="btn">
+    <a  href=""><svg style="width:36px;height:36px;margin-right:8px;margin-bottom:-9px" viewBox="0 0 24 24"><path fill="currentColor" d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z"></path></svg>Paper</a>
+    <a style="margin-left: 12pt;" href=""><svg style="width:36px;height:36px;margin-right:8px;margin-bottom:-9px" viewBox="0 0 24 24"><path fill="currentColor" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"></path></svg>Code</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="content">
+<h2>Overview</h2>
+<table>
+<tbody>
+<tr>
+    <td><img src='images/pref-pipeline.png' width="100%"></td>
+</tr>
+<tr>
+    <td>Knowing the 3D motions in a dynamic scene is essential to many vision applications. Recent progress is mainly focused on estimating the activity of some specific elements like humans. In this paper, we leverage a neural motion field for estimating the motion of all points in a multiview setting. Modeling the motion from a dynamic scene with multiview data is challenging due to the ambiguities in points of similar color and points with time-varying color. We propose to regularize the estimated motion to be predictable. If the motion from previous frames is known, then the motion in the near future should be predictable. Therefore, we introduce a predictability regularization by first conditioning the estimated motion on latent embeddings, then by adopting a predictor network to enforce predictability on the embeddings. The proposed framework PREF (Predictability REgularized Fields) achieves on par or better results than state-of-the-art neural motion field-based dynamic scene representation methods, while requiring no prior knowledge of the scene.</td>
+</tr>
+<tr style="text-align: center;">
+    <td><video width="60%" muted autoplay loop><source src="images/pref-overview.mp4" type="video/mp4"></video></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="content">
+<h2>Video</h2>
+<table>
+<tbody>
+</tbody>
+</table>
+</div>
+
+<div class="content">
+<h2>Citation</h2>
+    <div width='100%' class="cite"> <pre><code>
+                        @InProceedings{ECCV,
+                            author = {},
+                            title = {},
+                            booktitle = {Proceedings of the European Conference on Computer Vision (ECCV)},
+                            month = {},
+                            year = {}
+                        }
+    </code></pre></div>
+</div>
+
+
+</div>
+</body>
+<script src="copy.js"></script>

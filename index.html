@@ -2,139 +2,193 @@
     <title>Liangchen Song's home page</title>
     <meta name="author" content="Liangchen Song">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="font-family:'Verdana'">
-<table style="width: 60%; margin-left: auto; margin-right: auto;">
+<body>
+<div class="main">
+<div class="content">
+<table>
 <tbody>
 <tr>
     <td colspan="1" rowspan="3" width="10%"><img width="180" src="images/me.jpg"></td>
-    <td width="50%"><h1>Liangchen Song</h1></td>
+    <td width="50%" style="font-family:'Bungee Shade'"><h1>Liangchen Song</h1></td>
 </tr>
 <tr>
-    <td>Hi there! I am a third-year Ph.D. student from University at Buffalo, advised by Prof. <a href="https://cse.buffalo.edu/~jsyuan/index.html">Junsong Yuan</a>.</td>
+    <td>Hi there! I am a third-year Ph.D. student from University at Buffalo, advised by Prof. <a href="https://cse.buffalo.edu/~jsyuan/index.html">Junsong Yuan</a>.
+    <p style="font-weight: bold;">I am interested in <a href="https://neuralfields.cs.brown.edu/">neural fields</a>.</p>
+    </td>
 </tr>
 <tr>
     <td>
         <b>Email:</b> &nbsp; lsong8 at buffalo.edu<br>
-        <b>Links:</b> &nbsp; <a href="https://github.com/lsongx">Github</a> &nbsp;
-        <a href="https://dblp.uni-trier.de/pers/hd/s/Song:Liangchen">dblp</a> &nbsp;
+        <b>Links:</b> &nbsp; <a href="https://github.com/lsongx">Github</a> /
+        <a href="https://dblp.uni-trier.de/pers/hd/s/Song:Liangchen">dblp</a> /
         <a href="https://scholar.google.com/citations?hl=en&user=Kl4T9FYAAAAJ">Google scholar</a> 
     </td>
 </tr>
-<tr>
-    <td><font size="-2">
-        I'm imitating Prof. <a href="https://twitter.com/mattniessner">Matthias Nießner</a>.<br>
-        Photo taken by Dr. <a href="https://sites.google.com/site/lizhong19900216">Zhong Li</a>. <br>
-        Background created by <a href="https://dingjianyun830.github.io/">Yuqi Ding</a>. <br>
-    </font></td>
-</tr>
-<tr><td colspan="2"><hr></td></tr>
 </tbody>
 </table>
+</div>
 
-
-<table style="width: 60%; margin-left: auto; margin-right: auto;">
+<div class="content">
+<h2>Projects</h2>
+<table class="highlight">
 <tbody>
 <tr>
-    <td colspan="2"><h2><a name="research">Current Research</a></h2></td>
+    <td style="padding:20px;width:25%;vertical-align:middle"><img src="images/dynamic-ps.gif"></td>
+    <td><b>Photometric stereo for dynamic scenes</b><br>
+        <ul><li>Assuming there is only one light for each frame. </li> 
+            <li>Aiming to recover the normal map for all frames.</li></ul>
+    </td>
 </tr>
-
-<tr>
-    <td rowspan="2" width="10%"><img width="128" height="128" src="images/dynamic-ps.gif"></td>
-    <td><b>Photometric stereo for dynamic scenes</b></td>
+<tr onmouseout="neulf_stop()" onmouseover="neulf_start()">
+    <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one"><div class="two" id="neulf"><video width=100% height=100% muted autoplay loop><source src="images/neulf.mp4" type="video/mp4"></video></div>
+        <img src='images/neulf.png' width="160"></div>
+        <script type="text/javascript">
+            function neulf_start() {
+              document.getElementById('neulf').style.opacity = "1";
+            }
+            function neulf_stop() {
+              document.getElementById('neulf').style.opacity = "0";
+            }
+            neulf_stop()
+          </script>
+    </td>
+    <td><b>Neural 4D Light Field Rendering</b><br>
+        Representing light field with a MLP. Work accepted as a EGSR 2022 symposium track paper:<br>
+        <a class="long" href="https://diglib.eg.org/bitstream/handle/10.2312/sr20221156/059-069.pdf?sequence=1&isAllowed=y">NeuLF: Efficient Novel View Synthesis with Neural 4D Light Field</a><br>
+        <p style="font-size: 80%;"><a href="https://sites.google.com/site/lizhong19900216"> Zhong Li</a>,
+        <a href="https://lsongx.github.io/"> Liangchen Song</a>,
+        <a href="https://www.cct.lsu.edu/~cliu/"> Celong Liu</a>,
+        <a href="https://cse.buffalo.edu/~jsyuan/"> Junsong Yuan</a>,
+        <a href="https://www.linkedin.com/in/yi-xu-42654823/"> Yi Xu</a></p>
+        <p style="font-size: 80%;"><a href="https://lizhong3232.github.io/neulf/">[project page]</a></p>
+    </td>
 </tr>
-<tr>
-    <td><ul>
-        <li>Assuming there is only one light for each frame. </li> 
-        <li>Aiming to recover the normal map for all frames.</li> 
-    </ul></td>
-</tr>
-
-<tr><td colspan="2"><hr></td></tr>
 </tbody>
 </table>
+</div>
 
 
-<table style="width: 60%; margin-left: auto; margin-right: auto;">
+<div class="content">
+<h2 style="line-height: 80%;">
+    Selected 
+    <span style="font-size: 80%;">(<a class="none" href="" id="show3" onclick="show(3);return false;">three</a>/<a class="none" href="" id="show5" onclick="show(5);return false;">five</a>)</span>
+    Publications
+    <p style="font-size: 40%;">(* indicates equal contribution)</p>
+</h2>
+
+<table id='pubs3' class="highlight">
 <tbody>
 <tr>
-    <td colspan="2"><h2><a name="pub">Selected Publications</a>
-        <br><font size="-1">(* indicates equal contribution)</font></h2></td>
-</tr>
-<!-- <tr>
-    <td colspan="2" style="padding-top: 0.5cm;"><h3>2021</h3></td>
-</tr>
-<tr>
-    <td valign="top">&diams;</td>
-    <td><strong>Liangchen Song</strong>*, Sheng Liu*, Celong Liu, Zhong Li, Yuqi Ding, Yi Xu, and Junsong Yuan. <br>
-        "Learning Kinematic Formulas from Multiple View Videos." <br>
-        <i>ACM MM 2021 (Brave New Idea Track)</i> 
-        <a href="https://github.com/lsongx/physics-nerf">[code]</a> 
+    <td style="padding:20px;width:20%;vertical-align:middle"><img style="width: 100%;" src="images/pref.png"></td>
+    <td><strong>PREF: Predictability Regularized Neural Motion Fields.</strong>
+        <p style="font-size: 90%;"><strong>Liangchen Song</strong>, Xuan Gong, Benjamin Planche, Meng Zheng, David Doermann, Junsong Yuan, Terrence Chen, and Ziyan Wu.</p>
+        ECCV 2022 <span style="color: #cb4b16">(oral)</span><br>
+        <p style="font-size: 90%;">
+        <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Song_Stacked_Homography_Transformations_for_Multi-View_Pedestrian_Detection_ICCV_2021_paper.pdf">[pdf]</a> 
+        <a href="projects/pref.html">[project page]</a> </p>
     </td>
 </tr>
 <tr>
-    <td valign="top">&diams;</td>
-    <td><strong>Liangchen Song</strong>, Jialian Wu, Ming Yang, Qian Zhang, Yuan Li, and Junsong Yuan. <br>
-        "Handling Difficult Labels for Multi-label Image Classification via Uncertainty Distillation." <br>
-        <i>ACM MM 2021</i> 
-        <a href="https://github.com/lsongx/ud">[code]</a> 
+    <td style="padding:20px;width:20%;vertical-align:middle"><img style="width: 100%;" src="images/pr.png"></td>
+    <td><strong>Unsupervised domain adaptive re-identification: Theory and practice.</strong>
+        <p style="font-size: 90%;"><strong>Liangchen Song</strong>*, Cheng Wang*, Lefei Zhang, Bo Du, Qian Zhang, Chang Huang, and Xinggang Wang.</p>
+        Pattern Recognition 2020 <a class="plain" style="color: #cb4b16;font-size:90%" href="https://www.journals.elsevier.com/pattern-recognition/most-cited-articles">(3<sup>rd</sup> most cited PR 2020 paper)</a><br>
+        <p style="font-size: 90%;"><a href="https://arxiv.org/pdf/1807.11334.pdf">[pdf]</a> 
+        <a href="https://github.com/lsongx/DomainAdaptiveReID">[code]</a> </p>
     </td>
 </tr>
 <tr>
-    <td valign="top">&diams;</td>
-    <td><strong>Liangchen Song</strong>, Jialian Wu, Ming Yang, Qian Zhang, Yuan Li, and Junsong Yuan. <br>
-        "Stacked Homography Transformations for Multi-View Pedestrian Detection." <br>
-        <i>ICCV 2021 (oral)</i> 
-        <a href="https://github.com/lsongx/shot">[code]</a> 
+    <td style="padding:20px;width:20%;vertical-align:middle"><img style="width: 100%;" src="images/tsvd.png"></td>
+    <td><strong>Nonlocal patch based t-SVD for image inpainting: algorithm and error analysis.</strong>
+        <p style="font-size: 90%;"><strong>Liangchen Song</strong>, Bo Du, Lefei Zhang, Liangpei Zhang, Jia Wu, and Xuelong Li. <br></p>
+        AAAI 2018 <span style="color: #cb4b16">(oral)</span><br>
+        <p style="font-size: 90%;">
+        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/11878/11737">[pdf]</a>
+        <a href="https://drive.google.com/file/d/1J0LSnglVLnULzC7Q27VmFhyKMUy_Hhmf/view?usp=sharing">[code]</a> </p>
     </td>
 </tr>
-<tr>
-    <td valign="top">&diams;</td>
-    <td>Helong Zhou*, <strong>Liangchen Song</strong>*, Jiajie Chen*, Ye Zhou, Guoli Wang, Junsong Yuan, and Qian Zhang. <br>
-        "Rethinking Soft Labels for Knowledge Distillation: A Bias-Variance Tradeoff Perspective." <br>
-        <i>ICLR 2021</i> 
-        <a href="https://github.com/bellymonster/Weighted-Soft-Label-Distillation">[code]</a> 
-    </td>
-</tr>
-<tr>
-    <td valign="top">&diams;</td>
-    <td><strong>Liangchen Song</strong>, Jialian Wu, Ming Yang, Qian Zhang, Yuan Li, and Junsong Yuan. <br>
-        "Robust Knowledge Transfer via Hybrid Forward on the Teacher-Student Model." <br>
-        <i>AAAI 2021</i> 
-        <a href="https://github.com/lsongx/hybrid-pp">[code]</a> 
-    </td>
-</tr> -->
-<tr>
-    <td colspan="2" style="padding-top: 0.5cm;"><h3>Before 2019</h3></td>
-</tr>
-<tr>
-    <td valign="top">&diams;</td>
-    <td><strong>Liangchen Song</strong>*, Yonghao Xu*, Lefei Zhang, Bo Du, Qian Zhang, and Xinggang Wang. <br>
-        "Learning from Synthetic Images via Active Pseudo-Labeling." <br>
-        <i>IEEE Transactions on Image Processing</i> 
-        <a href="https://github.com/lsongx/APL">[code]</a> 
-    </td>
-</tr>
-<tr>
-    <td valign="top">&diams;</td>
-    <td><strong>Liangchen Song</strong>*, Cheng Wang*, Lefei Zhang, Bo Du, Qian Zhang, Chang Huang, and Xinggang Wang. <br>
-        "Unsupervised domain adaptive re-identification: Theory and practice." <br>
-        <i>Pattern Recognition</i> 
-        <a href="https://github.com/lsongx/DomainAdaptiveReID">[code]</a> 
-    </td>
-</tr>
-<tr>
-    <td valign="top">&diams;</td>
-    <td><strong>Liangchen Song</strong>, Bo Du, Lefei Zhang, Liangpei Zhang, Jia Wu, and Xuelong Li. <br>
-        "Nonlocal patch based t-SVD for image inpainting: algorithm and error analysis." <br>
-        <i>AAAI 2018</i> (oral) 
-        <a href="https://drive.google.com/file/d/1J0LSnglVLnULzC7Q27VmFhyKMUy_Hhmf/view?usp=sharing">[code]</a> 
-    </td>
-</tr>
-</ul>
-
 </tbody>
 </table>
 
+<table id='pubs5' class="highlight">
+<tbody>
+<tr>
+    <td style="padding:20px;width:20%;vertical-align:middle"><img style="width: 100%;" src="images/pref.png"></td>
+    <td><strong>PREF: Predictability Regularized Neural Motion Fields.</strong>
+        <p style="font-size: 90%;"><strong>Liangchen Song</strong>, Xuan Gong, Benjamin Planche, Meng Zheng, David Doermann, Junsong Yuan, Terrence Chen, and Ziyan Wu.</p>
+        ECCV 2022 <span style="color: #cb4b16">(oral)</span><br>
+        <p style="font-size: 90%;">
+        <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Song_Stacked_Homography_Transformations_for_Multi-View_Pedestrian_Detection_ICCV_2021_paper.pdf">[pdf]</a> 
+        <a href="projects/pref.html">[project page]</a> </p>
+    </td>
+</tr>
+<tr>
+    <td style="padding:20px;width:20%;vertical-align:middle"><img style="width: 100%;" src="images/shot.png"></td>
+    <td><strong>Stacked Homography Transformations for Multi-View Pedestrian Detection.</strong>
+        <p style="font-size: 90%;"><strong>Liangchen Song</strong>, Jialian Wu, Ming Yang, Qian Zhang, Yuan Li, and Junsong Yuan.</p>
+        ICCV 2021 <span style="color: #cb4b16">(oral)</span><br>
+        <p style="font-size: 90%;">
+        <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Song_Stacked_Homography_Transformations_for_Multi-View_Pedestrian_Detection_ICCV_2021_paper.pdf">[pdf]</a> 
+        <a href="https://github.com/lsongx/shot">[code]</a> </p>
+    </td>
+</tr>
+<tr>
+    <td style="padding:20px;width:20%;vertical-align:middle"><img style="width: 100%;" src="images/wsl.png"></td>
+    <td><strong>Rethinking Soft Labels for Knowledge Distillation: A Bias-Variance Tradeoff Perspective.</strong>
+        <p style="font-size: 90%;">Helong Zhou*, <strong>Liangchen Song</strong>*, Jiajie Chen*, Ye Zhou, Guoli Wang, Junsong Yuan, and Qian Zhang.</p>
+        ICLR 2021<br>
+            <p style="font-size: 90%;">
+        <a href="https://openreview.net/pdf?id=gIHd-5X324">[pdf]</a> 
+        <a href="https://github.com/bellymonster/Weighted-Soft-Label-Distillation">[code]</a></p>
+    </td>
+</tr>
+<tr>
+    <td style="padding:20px;width:20%;vertical-align:middle"><img style="width: 100%;" src="images/pr.png"></td>
+    <td><strong>Unsupervised domain adaptive re-identification: Theory and practice.</strong>
+        <p style="font-size: 90%;"><strong>Liangchen Song</strong>*, Cheng Wang*, Lefei Zhang, Bo Du, Qian Zhang, Chang Huang, and Xinggang Wang.</p>
+        Pattern Recognition 2020 <a class="plain" style="color: #cb4b16;font-size:90%" href="https://www.journals.elsevier.com/pattern-recognition/most-cited-articles">(3<sup>rd</sup> most cited PR 2020 paper)</a><br>
+        <p style="font-size: 90%;"><a href="https://arxiv.org/pdf/1807.11334.pdf">[pdf]</a> 
+        <a href="https://github.com/lsongx/DomainAdaptiveReID">[code]</a> </p>
+    </td>
+</tr>
+<tr>
+    <td style="padding:20px;width:20%;vertical-align:middle"><img style="width: 100%;" src="images/tsvd.png"></td>
+    <td><strong>Nonlocal patch based t-SVD for image inpainting: algorithm and error analysis.</strong>
+        <p style="font-size: 90%;"><strong>Liangchen Song</strong>, Bo Du, Lefei Zhang, Liangpei Zhang, Jia Wu, and Xuelong Li. <br></p>
+        AAAI 2018 <span style="color: #cb4b16">(oral)</span><br>
+        <p style="font-size: 90%;">
+        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/11878/11737">[pdf]</a>
+        <a href="https://drive.google.com/file/d/1J0LSnglVLnULzC7Q27VmFhyKMUy_Hhmf/view?usp=sharing">[code]</a> </p>
+    </td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<script>
+function show(num) {
+    if (num == 3){
+        document.getElementById("pubs3").style.display = "block";
+        document.getElementById("pubs5").style.display = "none";
+        document.getElementById('show3').style = 'color:#586e75';
+        document.getElementById('show5').style = 'color:#586e7538';
+    } else if (num == 5) {
+        document.getElementById("pubs5").style.display = "block";
+        document.getElementById("pubs3").style.display = "none";
+        document.getElementById('show5').style = 'color:#586e75';
+        document.getElementById('show3').style = 'color:#586e7538';
+    }
+}      
+show(3)
+</script>
+
+</div>
 </body>

@@ -1,0 +1,117 @@
+body {
+    font-family: Titillium Web, Verdana, serif;
+    color: #586e75;
+    background-position:center; 
+    background: #eee8d5;
+    line-height: 150%;
+}
+
+a {
+    box-shadow: none;
+    color: #268ad2;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    text-decoration: none;
+}
+a:hover {
+    box-shadow: inset 200px 0 0 0 #268ad2;
+    color: white;
+}
+a.long:hover {
+    box-shadow: inset 1000px 0 0 0 #268ad2;
+    color: white;
+}
+a.plain:hover {
+    box-shadow: none;
+    border-bottom: 1px dotted #cb4b16;
+}
+a.none {
+    color: #586e75;
+}
+a.none:hover{
+    color: #586e75;
+    box-shadow: none;
+}
+
+h2 {
+    font-weight: bold; 
+    color: #586e75;
+    border-bottom-style:solid; 
+    border-bottom-color: #586e75;
+    line-height: 2em;
+}
+p {
+    margin-top: 0em;
+    margin-bottom: 0em;      
+}
+div.main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 780px;
+    box-shadow:  0px 5px 40px 17px rgba(0, 0, 0, 0.11);
+    background: #fdf6e3;
+    border-radius: 3px;
+}
+div.content {
+    display: block; 
+    overflow: hidden;
+    padding: 5px 25px;
+}
+.one {
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+.two {
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out;
+}
+table.highlight tr:hover {
+    background: #fdf3d6;
+    box-shadow:  0px 0px 5px 2px rgba(0, 0, 0, 0.11);
+    border-radius: 5px;
+}
+
+td.btn {
+    padding-top: 18pt;
+    vertical-align:middle;
+    font-weight: bold;
+    font-size: 18pt;
+}
+td.btn a:hover {
+    box-shadow: None;
+    color: #dc322f;
+    background: #fdf3d6;
+}
+
+div.cite {
+    font-family: monospace;
+    background: #fdf3d6;
+    box-shadow:  0px 0px 5px 2px rgba(0, 0, 0, 0.11);
+    border-radius: 5px;
+    text-align: left;
+    line-height: 120%;
+}
+div.cite pre {
+    position: relative;
+    border-radius:10px;
+    padding-top: 15px;
+}
+div.cite button {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding:.15rem;
+    background-color:#fdf3d6;
+    border-radius:5px;
+}
+div.cite button:hover{
+    cursor:pointer;
+    background-color:#bcbabb;
+}
+
