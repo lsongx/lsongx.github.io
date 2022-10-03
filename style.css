@@ -117,11 +117,17 @@ p {
     /* display: block; */
     display: none;
 }
-.hide {
+.hoverhide {
     display: block;
 }
-.highlight tr:hover .hide {
+.highlight tr:hover .hoverhide {
     display: none;
+}
+.hovershow {
+    display: none;
+}
+.highlight tr:hover .hovershow {
+    display: block;
 }
 
 td.btn {
