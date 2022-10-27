@@ -187,3 +187,9 @@ td.btn a:hover {
     width: 100%;
     height: 100%;
 }
+
+.rainbow {
+    background: linear-gradient(to right, #ed3633, #fc719f, #7430ea, #008cff, #0083c5, #13af1b, #e3ba00, #ff9d00, #ed3633);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
