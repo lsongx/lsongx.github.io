@@ -14,6 +14,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Titillium+Web&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+          }
+        };
+    </script>      
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -45,7 +53,7 @@
 <td class="btn">
     <a href=""><svg style="width:36px;height:36px;margin-right:8px;margin-bottom:-9px" viewBox="0 0 24 24"><path fill="currentColor" d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z"></path></svg>Paper</a>
     <!-- <a style="margin-left: 12pt;" href=""><svg xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;margin-right:8px;margin-bottom:-9px" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>Code </a> -->
-    <a style="margin-left: 12pt;" href=""><svg xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;margin-right:8px;margin-bottom:-9px" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>Code (coming soon)</a>
+    <!-- <a style="margin-left: 12pt;" href=""><svg xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;margin-right:8px;margin-bottom:-9px" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>Code (coming soon)</a> -->
 </td>
 </tr>
 </tbody>
@@ -57,7 +65,6 @@
 <table>
 <tbody>
 <div class="video-container">
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/flVqSLZWBMI" title="Efficient-NeRF2NeRF" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 <iframe width="90%" height="1000" src="https://www.youtube.com/embed/zHSvF50Q6-k" title="Efficient-NeRF2NeRF" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 </tbody>
@@ -69,16 +76,61 @@
 <table>
 <tbody>
 <tr>
+    <td><strong>TLDR:</strong> Applying multiview-consistency regularization to Instruct-Pix2Pix can accelerate the 3D editing process.
+    </td>
+</tr>
+<tr>
     <td>The advancement of text-driven 3D content editing has been blessed by the progress from 2D generative diffusion models. However, a major obstacle hindering the widespread adoption of 3D content editing is its time-intensive processing. This challenge arises from the iterative and refining steps required to achieve consistent 3D outputs from 2D image-based generative models. Recent state-of-the-art methods typically require optimization time ranging from tens of minutes to several hours in order to edit a 3D scene using a single GPU. In this work, we propose that by incorporating correspondence regularization into diffusion models, the process of 3D editing can be significantly accelerated. This approach is inspired by the notion that the estimated samples during diffusion should be multiview-consistent during the diffusion generation process. By leveraging these multiview-consistency, we can edit 3D contents with a much faster speed. In most scenarios, our proposed technique brings a 10$\times$ speed-up compared to the baseline method and  completes the editing of a 3D scene in 2 minutes with comparable quality.
     </td>
 </tr>
-<!-- <tr style="text-align:center">
-    <td><img src='images/nerfplayer-framework.png' width="100%"></td>
-</tr> -->
+<tr style="text-align:center">
+    <td><img src='images/en2n/framework-v2-6.png' width="100%"></td>
+</tr>
+<tr>
+    <td>
+        We regularize that the output obtained during the denoising process of diffusion aligns with the input multiview images in terms of multiview correspondence. The multiview correspondence is applied on the estimated latents during denoising, as shown below.
+    </td>
+</tr>
+<tr style="text-align:center">
+    <td><img src='images/en2n/framework-average-3.png' width="50%"></td>
+</tr>
+<tr>
+    <td>
+        In the above figure, ${I}_a$ and ${I}_b$ are input views with correspondence pair $({p}_a,{p}_b)$. ${x}_a^t$ and ${x}_b^t$ are the samples at time $t$.
+    </td>
+</tr>
 </tbody>
 </table>
 </div>
 
+
+<div class="content">
+<h2 style="text-align:center">Related Works</h2>
+<table>
+<tbody>
+<tr>
+    <td>👍 <strong><a href="https://instruct-nerf2nerf.github.io/">Instruct-NeRF2NeRF</a></strong>: The method that our model is based on. If you haven't read this, please read it first.</td> 
+</tr>
+<tr>
+<td>👍 <strong>SDS based editing methods: </strong>
+    <strong><a href="https://tau-vailab.github.io/Vox-E/">Vox-E</a></strong>, 
+    <strong><a href="https://focaldreamer.github.io/">FocalDreamer</a></strong>,
+    <strong><a href="https://vcai.mpi-inf.mpg.de/projects/AvatarStudio/">AvatarStudio</a></strong>, and
+    <strong><a href="https://www.sysu-hcp.net/projects/cv/111.html">DreamEditor</a></strong>.
+</td>
+</tr>
+<tr>
+<td>👍 <strong>Gaussian Splatting based efficient editing methods: </strong>
+    <strong><a href="https://gaussianeditor.github.io/">GaussianEditor</a></strong> from Huawei, and
+    <strong><a href="https://buaacyw.github.io/gaussian-editor/">GaussianEditor</a></strong> from NTU.
+</td>
+</tr>
+<tr>
+    <td>👉 More related works, like CLIP-based methods (<strong><a href="https://cassiepython.github.io/nerfart/">NeRF-Art</a></strong>), can be found in our paper.</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 <div class="content">
 <h2 style="text-align:center">Citation</h2>
